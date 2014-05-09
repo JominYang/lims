@@ -1,0 +1,269 @@
+/* ----------------------------------------------------------------------------------------------------------
+
+    Output device: screen, projection
+
+    Author:     Nuvio (www.nuvio.cz)
+    Update:     2008-07-29, 18:30 GMT+1
+    Version:    2.2.6 (2008-07-13, 14:28 GMT+1)
+
+    Structure:
+        display; position; z-index; float; clear; width; height; overflow; margin; padding; border; background; align; font;
+
+    Content:
+    
+        1) HTML tags
+        2) HTML styles
+        3) Layout
+        4-1) Page: Homepage
+        5) Others
+
+---------------------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------------------------------------
+1) HTML tags
+---------------------------------------------------------------------------------------------------------- */
+
+body {
+	font:0.8em/1.5 "arial", sans-serif;
+	background-image: url(../design/bj.png);
+	background-repeat: repeat-x;
+	background-position: 0 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, address, blockquote, table, dl, fieldset {margin:15px 0;}
+
+/* ----------------------------------------------------------------------------------------------------------
+2) HTML styles
+---------------------------------------------------------------------------------------------------------- */
+
+ul.ul-01 {margin:15px 0; list-style:none;}
+ul.ul-01 li {
+	background:url("../design/bullet_blue.png") 0 50% no-repeat;
+	font-size:11px;
+	padding-top: 2px;
+	padding-right: 0;
+	padding-bottom: 2px;
+	padding-left: 15px;
+}
+
+
+ul.ul-list {margin:15px 0; list-style:none;}
+ul.ul-list li {padding:1px 0;}
+ul.ul-list span.date {padding-right:10px;}
+
+/* ----------------------------------------------------------------------------------------------------------
+3) Layout
+---------------------------------------------------------------------------------------------------------- */
+
+#main {width:960px; margin:0 auto; overflow:hidden;}
+
+    #header {
+	position:relative;
+	height:83px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+}
+    .head {position:relative; width:960px;  overflow:hidden; font:bold 90%/1 "tahoma",sans-serif;
+	text-align:center;
+
+	background-image: url(../design/header_b.gif);
+	background-repeat: repeat-x;
+	background-position: 0 0;
+	height: 60px;
+	}
+   .head .padder{
+	width:960px; margin:0 auto; background:url(../design/header_b.gif) #ffffff repeat-x 0 0; padding-bottom:4px; text-align:left;
+}
+.head .padder .nav{
+	background:url(../design/vertical.gif) repeat-x 0 -36px;
+	height:36px;
+	text-decoration: none;
+}
+.head .padder .navLeftBg{
+	background:url(../design/urlvertical.gif) no-repeat 0 0; height:36px;
+}
+.head .padder .navRightBg{
+	background:url(../design/icons.gif) no-repeat right -146px; height:36px;
+}
+.head .padder .nav .mainNav{
+	padding-left:24px; position:absolute;
+}
+.head .padder .nav .mainNav a:link,.head .padder .nav .mainNav a:visited,.head .padder .nav .mainNav a:active{
+	width:90px;
+	height:36px;
+	display:inline-block;
+	text-align:center;
+	color:#ffffff;
+	font-weight:bold;
+	font-size:14px;
+	line-height:36px;
+	margin-left:11px;
+	text-decoration: none;
+}
+.head .padder .nav .mainNav a:hover{
+	text-decoration:none;
+}
+.head .padder .nav .mainNav a.actived:link,.head .padder .nav .mainNav a.actived:visited,.head .padder .nav .mainNav a.actived:hover,.head .padder .nav .mainNav a.actived:active{
+	background:url(../design/icons.gif) no-repeat 0 -27px;
+	color:#000000;
+	text-decoration: none;
+}
+.head .padder .secondNav{
+	line-height:21px; text-align:left;
+}
+.head .padder .secondNav a{
+	color:#266392;
+	display:inline-block;
+	padding:0 8px;
+	margin-right:19px;
+	text-decoration: none;
+}
+.head .padder .secondNav a.actived{
+	font-weight:bold;
+}
+.head .padder .secondNav .subNav1{
+	display:none;
+}
+.head .padder .secondNav .subNav2{
+	padding-left:150px;display:none;
+}
+.head .padder .secondNav .subNav3{
+	padding-left:250px;display:none;
+}
+.head .padder .secondNav .subNav4{
+	padding-left:350px;display:none;
+}
+.head .padder .secondNav .subNav5{
+	padding-left:450px;display:none;
+}
+.head .padder .secondNav .subNav6{
+	padding-left:550px;display:none;
+}
+.head .padder .secondNav .subNav7{
+	padding-left:650px;display:none;
+}
+  
+
+/* ----------------------------------------------------------------------------------------------------------
+4-1) Page: Homepage
+---------------------------------------------------------------------------------------------------------- */
+
+#col-top {width:960px; height:5px; margin-top:5px; background:url("../design/col-top.gif") 0 0 no-repeat; font-size:0; line-height:0; overflow:hidden;}
+#col-bottom {width:960px; height:5px; margin-bottom:15px; background:url("../design/col-bottom.gif") 0 0 no-repeat; font-size:0; line-height:0; overflow:hidden;}
+#col {
+	position:relative;
+	background:url("../design/col.gif") 0 0 repeat-y;
+	height: 295px;
+	padding-top: 15px;
+	padding-right: 20px;
+	padding-bottom: 15px;
+	padding-left: 20px;
+}
+
+    #ribbon {position:absolute; top:-5px; left:0; width:100px; height:100px; background:url("../design/ribbon.gif") 0 0 no-repeat; font-size:0; line-height:0; overflow:hidden; z-index:10;}
+
+    #col-browser {position:relative; float:left; width:280px; height:215px; background:url("../design/browser.gif") 0 0 no-repeat;}
+    #col-browser img {position:absolute; top:28px; left:10px;}
+
+    #col-text {
+	float:right;
+	width:600px;
+	padding-top:7px;
+	line-height:1.7;
+	height: 240px;
+}
+
+        #slogan {position:relative; width:289px; height:33px; overflow:hidden; margin:0; padding:0; font-size:180%;}
+        #slogan span {display:block; position:absolute; top:0; left:0; z-index:1; width:100%; height:100%; margin:0; padding:0; background:url("../tmp/slogan.gif") 0 0 no-repeat;}
+        #btns {margin-top:25px; margin-bottom:0;}
+
+#cols2-top {width:960px; height:5px; margin-top:15px; background:url("../design/cols2-top.gif") 0 0 no-repeat; font-size:0; line-height:0; overflow:hidden;}
+#cols2-bottom {width:960px; height:5px; margin-bottom:15px; background:url("../design/cols2-bottom.gif") 0 0 no-repeat; font-size:0; line-height:0; overflow:hidden;}
+#cols2 {background:url("../design/cols2.gif") 0 0 repeat-y;}
+
+    #cols2 #col-left {float:left; width:595px; padding:20px;}
+    #cols2 #col-right {float:right; width:268px; margin-right:1px; padding:20px;}
+    
+        #cols2 #col-left h4, #cols2 #col-right h4 {margin:0; font-size:100%;}
+        #cols2 #col-left .title {background:url("../design/dot.gif") 0 50% repeat-x;}
+        #cols2 #col-left .title h4 {display:inline; padding-right:10px;}
+        #cols2 #col-left .title span {padding-left:10px;}
+
+        #cols2 .box {margin-top:15px;}
+        #cols2 #col-right h4 {background:url("../design/dot-02.gif") 0 50% repeat-x;}
+        #cols2 #col-right h4 span {padding-right:10px;}
+        #cols2 .col-right-img {float:left; width:65px;}
+        #cols2 .col-right-text {
+	width:240px;
+}
+        #cols2 .col-right-text p {margin:0;}
+
+#cols3-top {width:960px; height:5px; margin-top:15px; background:url("../design/cols3-top.gif") 0 0 no-repeat; font-size:0; line-height:0; overflow:hidden;}
+#cols3-bottom {width:960px; height:5px; margin-bottom:15px; background:url("../design/cols3-bottom.gif") 0 0 no-repeat; font-size:0; line-height:0; overflow:hidden;}
+#cols3 {background:url("../design/cols3.gif") 0 0 repeat-y;}
+
+    .col {float:left; width:308px; padding:0 1px; margin-right:15px;}
+    .col.last {margin-right:0;}
+    .col h3 {
+		background: url("../design/bricks.png") no-repeat scroll 20px 40% transparent;
+	margin:0;
+	font-size:110%;
+	height: 12px;
+	padding-top: 2px;
+	padding-right: 15px;
+	padding-bottom: 12px;
+	padding-left: 20px;
+}
+   .col h3 a{
+	text-decoration: none;
+}
+
+        .col-text {
+	border-top:1px solid #DFDFDF;
+	padding-top: 2px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+        .col-text ul {
+	margin-bottom:0;
+	font-family: "黑体";
+	text-decoration: none;
+}
+   .col-text ul li a{
+	margin-bottom:0;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 12px;
+	text-decoration: none;
+	color: #000;
+}
+  .col-text ul li a:hover{
+	margin-bottom:0;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 12px;
+	text-decoration: none;
+	color: #F30;
+}
+        .col-more {
+	text-align:right;
+	height: 25px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 1px;
+	padding-left: 0;
+}
+
+/* ----------------------------------------------------------------------------------------------------------
+5) Others
+---------------------------------------------------------------------------------------------------------- */
+
+.ico-comment {
+	padding-left:18px;
+	background-image: url(../design/flag_blue.png);
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+}
+.ico-rss {padding-left:18px; background:url("../design/ico-rss.gif") 0 50% no-repeat;}
+
+.smaller {font-size:85%;}

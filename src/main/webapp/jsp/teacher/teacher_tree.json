@@ -1,0 +1,84 @@
+[{   
+    "id":1,
+    "text":"资源中心", 
+	"state":"closed", 
+	 "iconCls":"icon-save",    
+
+    "children":[{   
+        "text":"资源上传"  
+    },{   
+        "text":"资源下载"  
+    }]   
+},{   
+    "id":2,
+    "text":"消息中心", 
+	"state":"closed", 
+	 "iconCls":"icon-save",    
+
+    "children":[{   
+        "text":"收件箱"  
+    },{   
+        "text":"发件箱"  
+    },{   
+        "text":"回收站"  
+    }]   
+},{   
+    "id":3,
+    "text":"实验室信息", 
+	"state":"closed", 
+	 "iconCls":"icon-save",    
+
+    "children":[{   
+        "text":"基本信息"  
+    },{   
+        "text":"实验信息"  
+    },{   
+        "text":"设备管理"  
+    }]   
+},{   
+    "id":4,
+    "text":"课表中心", 
+	"state":"closed", 
+	 "iconCls":"icon-save",    
+
+    "children":[{   
+        "text":"我的课表" ,
+         "attributes":{   
+            "url":"/lims/jsp/teacher/teaCurse.jsp",   
+            "price":100   
+        }     
+    },{
+    	"text":"课表详细信息",
+    	"attributes":{
+    		"url":"/lims/jsp/teacher/detailTeaCurse.jsp",
+    		"price":100
+    	}
+    },{
+    	"text":"手动排课",
+    	"attributes":{
+    		"url":"/lims/jsp/firstadmin/function/paikeDIY.jsp",
+    		"price":100
+    	}
+    }]   
+},{   
+    "id":6,
+    "text":"邮件服务", 
+	"state":"closed", 
+	 "iconCls":"icon-save",    
+    "children":[{   
+        "text":"发送电子邮件"  
+    }]   
+},{   
+    "id":7,
+    "text":"签到中心", 
+	"state":"closed", 
+	 "iconCls":"icon-save",    
+
+    "children":[{   
+        "text":"学生签到" ,
+         "attributes":{   
+            "url":"/lims/jsp/teacher/qiandao.jsp",   
+            "price":100   
+        }     
+    }]   
+}]  

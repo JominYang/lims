@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>网友嘿嘿分享一款超酷的图片轮播Jquery插件</title>
+<meta name="author" content="Jquery-School" />
+<meta name="Copyright" content="Jquery-School,www.jq-school.com" />
+<meta name="keywords" content="Jquery,Jquery资源,前端设计,div+css" />
+<meta name="description" content="JquerySchool是一个专门分享jquery资源、插件、特效的一个网站,完全开放源代码,把实际开发中应用最多、最实用的Jquery资源抽取出来再加以精心编排,让广大网友能以最短的时间、花最少的精力去真正掌握jQuery开发的知识。" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="robots" content="index, follow" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="screen,projection" type="text/css" href="css1/reset.css" />
+<link rel="stylesheet" media="screen,projection" type="text/css" href="css1/main.css" />
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="css/main-msie.css" /><![endif]-->
+<link rel="stylesheet" media="screen,projection" type="text/css" href="css1/style.css" />
+<link rel="stylesheet" media="print" type="text/css" href="css1/print.css" />
+<link rel="stylesheet" media="print" type="text/css" href="css1/header.css" />
+<link rel="stylesheet" type="text/css" href="./css1/jquery.slider.css" />
+<!--[if IE 6]>
+	<link rel="stylesheet" type="text/css" href="./css/jquery.slider.ie6.css" />
+<![endif]-->
+<style>
+img {
+	border: none;
+}
+.slider3 {
+	margin-top:50px
+}
+</style>
+<script type="text/javascript" src="js/jquery-easyui-1.2.6/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-easyui-1.2.6/imagejs/jcarousellite_1.0.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-easyui-1.2.6/imagejs/jquery.easing.1.1.js"></script>
+<script type="text/javascript" src="js/jquery.slider.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$(".mainNav a").mouseover(function(){
+		$(".mainNav a").attr("class","");
+		$("#"+this.id).attr("class","actived");
+		var currentMenuNo = parseInt(this.id.substring(1));
+		$(".secondNav div").each(function(){
+			$(this).hide();
+			$("#subNav"+currentMenuNo).show();
+		});
+	});
+  $("#slider3").slideshow({
+    width      : 900,
+    height     : 325,
+    transition : 'squareRandom'
+  });
+  $(".auto").jCarouselLite({
+		auto: 3000,
+		speed: 3000,
+		visible: 2
+	});
+});
+</script>
+</head>
+<style type="text/css">
+#content {
+	width: 960px;
+	
+	background-color: #FFFAFA;
+}
+#left {
+	width: 220px;
+	float: left;
+	margin-right: 10px;
+	margin-top:5px;
+	border: 1px solid #4397df;
+}
+#right {
+	width: 700px;
+	margin-top:5px;
+	float: right;
+	margin-left: 10px;
+	border: 1px solid #6aafdc;
+}
+#right_inner {
+	margin: auto;
+	padding: 10px;
+	
+	width: 680px;
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+a:hover {
+	color: #00F;
+	font-weight:bold;
+}
+#left ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+#left ul li {
+	padding: 0px 8px;
+	height: 26px;
+	line-height: 26px;
+	border-bottom: 1px solid #d8d8e8;
+	background-color: #e9eef2;
+	list-style-position: inside;
+	list-style-image: url(design/resultset_next.png);
+}
+#left ul li:hover {
+	padding: 0px 8px;
+	height: 26px;
+	line-height: 26px;
+	border-bottom: 1px solid #CCC;
+	background-color: #9C9;
+	list-style-position: inside;
+	list-style-image: url(design/star.png);
+}
+#title {
+	font-size: 13px;
+	font-weight: bold;
+	background-color: #4397df;
+	text-align: center;
+	width: 220px;
+	padding-top: 10px;
+	padding-bottom: 7px;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #d8d8e8;
+}
+#title1 {
+	font-size: 13px;
+	font-weight: bold;
+	background-color: #6aafdc;
+	text-align: center;
+	width: 700px;
+	padding-top: 10px;
+	padding-bottom: 7px;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #d8d8e8;
+}
+#right_inner ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+#right_inner ul li {
+	height: 30px;
+	line-height: 26px;
+	list-style-position: inside;
+	list-style-image: url(design/newspaper.png);
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #333333;
+	padding-top: 4px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+}
+#lian {
+	height:30px;
+	float:right;
+	width:160px;
+	margin-bottom:10px;
+}
+#txt {
+	float:right;
+	width: 340px;
+}
+#inner_bottom {
+	float: right;
+}
+#footer {
+    float:left;
+	width: 960px;
+	background-attachment: scroll;
+	background-image: url(design/bj.png);
+	background-repeat: repeat-x;
+	background-position: 0px -34px;
+	margin-top:2px;
+	height: 55px;
+}
+#footer h3 {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #000;
+	text-decoration: none;
+	margin: auto;
+}
+#footer h3 a {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #000;
+	text-decoration: none;
+}
+#footer h3 a:hover {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #F00;
+	text-decoration: none;
+}
+</style>
+<body>
+<div id="main">
+  <div id="header"> <img src="design/tb.png"  border="0" alt="" /> </div>
+  <div class="head">
+    <div class="padder">
+      <div class="nav">
+        <div class="navLaftBg">
+          <div class="navRightBg">
+            <div class="mainNav"> <a href="http://www.865171.cn/" id="n1" class="actived">首页</a> <a href="http://www.865171.cn/css-templates/" id="n2">新闻中心</a> <a href="http://www.865171.cn/admin-templates/" id="n3">通知/公告</a> <a href="http://www.865171.cn/css-code/" id="n5">资料中心</a> <a href="http://www.865171.cn/css-menu/" id="n6">论坛</a> <a href="http://www.865171.cn/css-menu/" id="n7">相关链接</a> <a href="http://www.865171.cn/css-menu/" id="n8">登录</a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="secondNav">
+        <div id="subNav1" class="subNav1"> <a href="http://www.865171.cn/icons/ico/" class="actived">信息院首页</a> <a href="http://www.865171.cn/icons/ico/" class="actived">轨道交通安全运行控制与通信研究所首页</a> </div>
+        <div id="subNav6" class="subNav6"> <a href="http://www.865171.cn/icons/ico/" class="actived">ICO图标</a> <a href="http://www.865171.cn/icons/gif/">GIF图片</a> <a href="http://www.865171.cn/icons/png/">PNG图标</a> </div>
+      </div>
+    </div>
+  </div>
+  <div id="content">
+    <div id="left">
+      <div id="title">网站地图</div>
+      <ul>
+        <a href="#">
+        <li>新闻中心</li>
+        </a> <a href="#">
+        <li>通知/公告</li>
+        </a> <a href="#">
+        <li>资料中心</li>
+        </a> <a href="#">
+        <li>论坛</li>
+        </a>
+      </ul>
+    </div>
+    <div id="right">
+      <div id="title1">详细内容</div>
+      <div id="right_inner">
+                   <h2><center>周科朝副校长致辞。他指出，近年来，中南大学的科学研究有了长足的发展，在教学、人才培养等方面继续保持着较强的特色。SSCI和A&amp;HCI数</center></h2>
+                      发布人：XXX        <span style="float:right">  时间：XXXX-XX-XX</span>
+                          <hr>
+                          <p><p>
+	10月25日上午，我校&ldquo;SSCI－社会科学引文索引&rdquo;与&ldquo;A&amp;HCI－艺术与人文引文索引&rdquo;数据库开通仪式在新校区图书馆报告厅举行。副校长周科朝与相关单位负责人、师生代表参加了开通仪式。</p>
+<p>
+	&nbsp;</p>
+<p align="center">
+	<img border="0" src="http://news.its.csu.edu.cn/Common/Editor/UploadFile/20121025155331562.jpg" /></p>
+<p>
+	<br />
+	&nbsp;&nbsp;&nbsp; 周科朝副校长致辞。他指出，近年来，中南大学的科学研究有了长足的发展，在教学、人才培养等方面继续保持着较强的特色。SSCI和A&amp;HCI数据库的开通，将有利于师生更便捷地查找和使用国际文献资源、掌握国际前沿动态。他希望师生能充分利用数据库资源，积极开展科研工作，推进学校的发展。<br />
+	&nbsp;&nbsp;&nbsp; 随后，数据库合作方、汤森路透集团大学与政府事业部总经理郭利向我校赠送了SSCI和A&amp;HCI数据库开通纪念盘。<br />
+	&nbsp;&nbsp;&nbsp; 开通仪式结束后，相关人员作了《开阔国际视野，点亮学术人生&mdash;&mdash;借助SSCI进行人文与社会科学研究》的培训讲座，详细介绍了SSCI数据库的各项功能及应用技巧。<br />
+	&nbsp;&nbsp;&nbsp; 据悉，作为世界领先的专业信息提供商，汤森路透集团出版的SSCI和A&amp;HCI数据库，精选和收集了全球最有影响力的3000多种人文社会科学期刊，覆盖了政治、经济、法律、教育、心理、地理、历史等五十多个的研究领域，提供了高质量和高影响力的学术信息，已成为全球知名的、专门针对人文社科领域的学术数据库。此数据库的开通将有助于推进我校人文社科科学研究的发展进程。</p>
+                          </p>
+      </div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <div id="inner_bottom">
+        <div id="lian"><a href="#"><img src="design/pre.gif"></img></a><a href="#" >&nbsp;&nbsp;&nbsp;&nbsp;<img src="design/next.gif"></a></div>
+        &nbsp;&nbsp;&nbsp;&nbsp; <span id="txt">总共<strong>4</strong>条记录，共<strong>1</strong>页，当前第<strong>1</strong>页</span>转到第
+        <select name="viewnewslistpage" onchange="javascript:changepage()" id="viewnewslistpage">
+          <option selected value="1"> 1 </option>
+          <option value="2"> 2 </option>
+          <option value="3"> 3 </option>
+          <option value="4"> 4 </option>
+          <option value="5"> 5 </option>
+          <option value="6"> 6 </option>
+          <option value="7"> 7 </option>
+          <option value="8"> 8 </option>
+          <option value="9"> 9 </option>
+          <option value="10"> 10 </option>
+          <option value="11"> 11 </option>
+          <option value="12"> 12 </option>
+        </select>
+        页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+    </div>
+    <div id="left">
+      <div id="title">常用链接</div>
+      <ul>
+        <a href="#">
+        <li>中南大学</li>
+        </a> <a href="#">
+        <li>中南大学铁道学院</li>
+        </a> <a href="#">
+        <li>中南大学湘雅医学院</li>
+        </a> <a href="#">
+        <li>教务管理系统</li>
+        </a> <a href="#">
+        <li>就业指导中心</li>
+        </a> <a href="#">
+        <li>交通运输学院</li>
+        </a> <a href="#">
+        <li>信息科学与工程学院</li>
+        </a> <a href="#">
+        <li>物理科学与工程学院</li>
+        </a>
+      </ul>
+    </div>
+  </div>
+  <hr class="noscreen" />
+  <div id="footer">
+    <center>
+      <h3>Copyright &copy;&nbsp;2012 <strong><a href="http://www.865171.cn/">中南大学轨道交通安全运行控制与通信研究所</a></strong>, All Rights Reserved &reg;</h3>
+    </center>
+    <center>
+      <h3>地址：中南大学铁道学院电子楼</h3>
+    </center>
+  </div>
+</div>
+</body>
+</html>

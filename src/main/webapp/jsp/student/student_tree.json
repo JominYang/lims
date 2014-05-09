@@ -1,0 +1,58 @@
+[{   
+    "id":1,
+    "text":"资源中心", 
+	"state":"closed", 
+	 "iconCls":"icon-save",    
+
+    "children":[{   
+        "text":"资源下载"  
+    }]   
+},{   
+    "id":2,
+    "text":"消息中心", 
+	"state":"closed", 
+	 "iconCls":"icon-save",    
+
+    "children":[{   
+        "text":"收件箱"  
+    },{   
+        "text":"发件箱"  
+    },{   
+        "text":"回收站"  
+    }]   
+},{   
+    "id":3,
+    "text":"选课中心", 
+	"state":"closed", 
+	 "iconCls":"icon-save",    
+
+    "children":[{   
+        "text":"学生选课",
+         "attributes":{   
+            "url":"/lims/jsp/student/studentsXK.jsp",   
+            "price":100   
+        }
+    }]   
+},{   
+    "id":4,
+    "text":"我的课表", 
+	"state":"closed", 
+	 "iconCls":"icon-save",    
+
+    "children":[{   
+        "text":"查看课表" ,
+         "attributes":{   
+            "url":"/lims/jsp/student/stuCourse.jsp",   
+            "price":100   
+        }     
+    }]   
+},{   
+    "id":5,
+    "text":"邮件服务", 
+	"state":"closed", 
+	 "iconCls":"icon-save",    
+
+    "children":[{   
+        "text":"发送电子邮件"  
+    }]   
+}]  
